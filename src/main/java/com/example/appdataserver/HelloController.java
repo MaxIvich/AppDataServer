@@ -1,14 +1,22 @@
 package com.example.appdataserver;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 
 public class HelloController {
-    @FXML
-    private Label welcomeText;
+    public ListView <String>listServer;
+    public ListView <String>listUser;
+    public ListView <String> input;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+
+    public void quitApp(ActionEvent actionEvent) {
+    }
+    public void sendToServer(ActionEvent actionEvent) {
+    }
+    public void sendToUser(ActionEvent actionEvent) {
+
     }
 }
