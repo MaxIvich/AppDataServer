@@ -1,4 +1,5 @@
 package com.example.appdataserver.ServerNatty;
+import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.buffer.ByteBuf;
@@ -9,6 +10,7 @@ public class StringHandler extends ChannelInboundHandlerAdapter{
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         System.out.println(" Клиент  подключен ");
+
 
     }
 
