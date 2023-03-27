@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24626db0-e4b2-43ed-81f4-e6b3c1fa64e3" name="Changes" comment="3">
-      <change afterPath="$PROJECT_DIR$/SFiles/11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SFiles/2233.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Suser/6666" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/FileInfo.java" afterDir="false" />
+    <list default="true" id="24626db0-e4b2-43ed-81f4-e6b3c1fa64e3" name="Changes" comment="4">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/PaneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/appdataserver/Pane.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/ServerNatty/StringHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/ServerNatty/StringHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/appdataserver/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/appdataserver/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="0.1" />
+        <entry key="$PROJECT_DIR$" value="0.2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,6 +70,9 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jylve\Desktop\AppDataServer\src\main\resources\com\example\appdataserver" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jylve\Desktop\AppDataServer\src\main\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.HelloApplication">
@@ -119,7 +118,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679496287663</updated>
       <workItem from="1679496288859" duration="14059000" />
-      <workItem from="1679577971301" duration="27828000" />
+      <workItem from="1679577971301" duration="42352000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1679496366055</created>
@@ -142,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679582613023</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="4">
+      <created>1679740572441</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679740572441</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +158,17 @@
     <MESSAGE value="1" />
     <MESSAGE value="2" />
     <MESSAGE value="3" />
-    <option name="LAST_COMMIT_MESSAGE" value="3" />
+    <MESSAGE value="4" />
+    <option name="LAST_COMMIT_MESSAGE" value="4" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.net.SocketException" package="java.net" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

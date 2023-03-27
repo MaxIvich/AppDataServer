@@ -11,20 +11,15 @@
             <MenuItem text="Выйти из программы" />
             </Menu>
     </MenuBar>
-
     <HBox>
-        <ComboBox />
-        <TextField editable="false" HBox.hgrow="ALWAYS" />
-        <Button text="Вверх" />
+        <fx:include source="Pane.fxml" HBox.hgrow="ALWAYS"/>
+        <TableView fx:id="listServer"  VBox.vgrow="ALWAYS"  />
     </HBox>
-    <TableView fx:id="listServer"  VBox.vgrow="ALWAYS" />
-
-
     <HBox  spacing="5">
-        <Button maxWidth="Infinity" text="На сервер" HBox.hgrow="ALWAYS" />
-        <Button maxWidth="Infinity"  text="C Сервера" HBox.hgrow="ALWAYS" />
-        <Button maxWidth="Infinity" text="Удалить" HBox.hgrow="ALWAYS" />
-        <Button maxWidth="Infinity" onAction="#quitApp" text="Выход" HBox.hgrow="ALWAYS" />
+        <Button onAction= "#sendToUser" maxWidth="Infinity" text="На сервер" HBox.hgrow="ALWAYS" focusTraversable="false" />
+        <Button maxWidth="Infinity"  text="C Сервера" HBox.hgrow="ALWAYS" focusTraversable="false" />
+        <Button maxWidth="Infinity" text="Удалить" HBox.hgrow="ALWAYS" focusTraversable="false"/>
+        <Button maxWidth="Infinity" onAction="#quitApp" text="Выход" HBox.hgrow="ALWAYS" focusTraversable="false" />
         <padding>
             <Insets bottom="5" left="5" right="5" top="5" />
         </padding>
