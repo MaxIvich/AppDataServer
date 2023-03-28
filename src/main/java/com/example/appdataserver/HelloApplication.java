@@ -20,7 +20,7 @@ public class HelloApplication extends Application {
 
         System.out.println(fxmlLoader.getLocation());
 
-        Scene scene = new Scene(fxmlLoader.load(), 640, 480);
+        Scene scene = new Scene(fxmlLoader.load(), 900, 480);
         stage.setTitle("App Data Server");
         stage.setScene(scene);
         stage.show();

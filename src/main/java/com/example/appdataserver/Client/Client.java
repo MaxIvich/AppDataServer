@@ -1,17 +1,47 @@
 package com.example.appdataserver.Client;
 
+import io.netty.bootstrap.Bootstrap;
+import io.netty.channel.*;
+import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.SocketChannel;
+import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.serialization.ClassResolvers;
+import io.netty.handler.codec.serialization.ObjectDecoder;
+import io.netty.handler.codec.serialization.ObjectEncoder;
+
+import java.util.Random;
+
+
+
 public class Client {
-  // <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0"
-  // prefWidth="430.0"
-  // xmlns="http://javafx.com/javafx/17.0.2-ea"
-  // fx:controller= "com.example.appdataserver.HelloController"
-  // xmlns:fx="http://javafx.com/fxml/1">
-  // <Button onAction="#sendToServer"  layoutX="5.0" layoutY="440.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="На сервер" />
-  // <Button onAction="#sendToUser" layoutX="295.0" layoutY="440.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="С сервера" />
-  // <Button onAction="#delFile" layoutX="155.0" layoutY="440.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="Удалить" />
-  // <Button onAction="#quitApp" layoutX="352.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Выход" />
-  // <TableView fx:id="listServer" layoutX="5" layoutY="27.0" prefHeight="326.0" prefWidth="195" />
-  // <TableView  fx:id="listUser" layoutX="221.0" layoutY="27.0" prefHeight="326.0" prefWidth="195.0" />
-  // <ListView fx:id="input" layoutX="115.0" layoutY="370.0" prefHeight="61.0" prefWidth="200.0" />
-   //</Pane>
+    public static int MB_20 = 20 * 1_000_000;
+    public static  void main(String[] args) {
+        EventLoopGroup workerGroup = new NioEventLoopGroup();
+        Bootstrap bootstrap = new Bootstrap()
+                .group(workerGroup)
+                .channel(NioServerSocketChannel.class)
+                .remoteAddress("localhost",8899)
+                .handler(new ChannelInitializer<SocketChannel>(){
+                    @Override
+                    public void initChannel(SocketChannel socketChannel) {
+                        socketChannel.pipeline().addLast(
+                                new ObjectDecoder(MB_20, ClassResolvers.cacheDisabled(null)),
+                                new ObjectEncoder(),
+                                new ClientHandler()
+
+                        );
+                    }
+
+                });
+        try {
+            ChannelFuture channelFuture = bootstrap.connect().sync();
+            Channel channel = channelFuture.channel();
+            AuthRequest authRequest = new AuthRequest("log","pass");
+            channel.writeAndFlush(authRequest);
+            channelFuture.channel().closeFuture().sync();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }

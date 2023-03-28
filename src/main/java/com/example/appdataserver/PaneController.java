@@ -53,7 +53,7 @@ public class PaneController implements Initializable {
 
         TableColumn<FileInfo,String>fileNameColumn = new TableColumn<>("Имя");
         fileNameColumn.setCellValueFactory(param->new SimpleStringProperty(param.getValue().getFilename()));
-        fileNameColumn.setPrefWidth(200);
+        fileNameColumn.setPrefWidth(350);
 
         TableColumn<FileInfo,Long>fileSizeColumn = new TableColumn<>("Размер");
         fileSizeColumn.setCellValueFactory(param->new SimpleObjectProperty<>(param.getValue().getFileSize()));
@@ -138,8 +138,8 @@ public class PaneController implements Initializable {
     public String getSelectedFileName(){
         return listUser.getSelectionModel().getSelectedItem().getFilename();
     }
-    public String getOpenDir(){
-        return pathField.getText();
 
+    public String getCurrentPatch(){
+        return  pathField.getText();
     }
 }

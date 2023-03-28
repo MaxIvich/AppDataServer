@@ -8,18 +8,18 @@
 
     <MenuBar>
         <Menu text=" Файл">
-            <MenuItem text="Выйти из программы" />
+            <MenuItem text="Выйти из программы" onAction="#quitApp"/>
             </Menu>
     </MenuBar>
-    <HBox>
-        <fx:include source="Pane.fxml" HBox.hgrow="ALWAYS"/>
+    <HBox VBox.vgrow="ALWAYS">
+        <fx:include fx:id="userPanel" source="Pane.fxml" HBox.hgrow="ALWAYS"/>
         <TableView fx:id="listServer"  VBox.vgrow="ALWAYS"  />
     </HBox>
     <HBox  spacing="5">
-        <Button onAction= "#sendToUser" maxWidth="Infinity" text="На сервер" HBox.hgrow="ALWAYS" focusTraversable="false" />
-        <Button maxWidth="Infinity"  text="C Сервера" HBox.hgrow="ALWAYS" focusTraversable="false" />
-        <Button maxWidth="Infinity" text="Удалить" HBox.hgrow="ALWAYS" focusTraversable="false"/>
-        <Button maxWidth="Infinity" onAction="#quitApp" text="Выход" HBox.hgrow="ALWAYS" focusTraversable="false" />
+        <Button onAction= "#sendToServer" maxWidth="Infinity" text="На сервер" HBox.hgrow="ALWAYS" focusTraversable="false" />
+        <Button onAction="#copyToUser" maxWidth="Infinity"  text="C Сервера" HBox.hgrow="ALWAYS" focusTraversable="false" />
+        <Button onAction="#delete" maxWidth="Infinity" text="Удалить" HBox.hgrow="ALWAYS" focusTraversable="false"/>
+        <Button  onAction="#quitApp" maxWidth="Infinity"  text="Выход" HBox.hgrow="ALWAYS" focusTraversable="false" />
         <padding>
             <Insets bottom="5" left="5" right="5" top="5" />
         </padding>

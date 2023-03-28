@@ -4,12 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24626db0-e4b2-43ed-81f4-e6b3c1fa64e3" name="Changes" comment="4">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/PaneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/appdataserver/Pane.fxml" afterDir="false" />
+    <list default="true" id="24626db0-e4b2-43ed-81f4-e6b3c1fa64e3" name="Changes" comment="5">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/AuthRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/BasicRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/BasicResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/ClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/GetFileListRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/ServerNatty/BiteToFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/PaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/PaneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/ServerNatty/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/ServerNatty/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/ServerNatty/StringHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/ServerNatty/StringHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/appdataserver/Pane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/appdataserver/Pane.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/appdataserver/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/appdataserver/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +85,20 @@
       <recent name="C:\Users\jylve\Desktop\AppDataServer\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HelloApplication">
+  <component name="RunManager" selected="Application.Client">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.appdataserver.Client.Client" />
+      <module name="AppDataServer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.appdataserver.Client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.appdataserver.HelloApplication" />
       <module name="AppDataServer" />
@@ -104,6 +127,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Client" />
         <item itemvalue="Application.HelloApplication" />
         <item itemvalue="Application.Server" />
       </list>
@@ -118,7 +142,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679496287663</updated>
       <workItem from="1679496288859" duration="14059000" />
-      <workItem from="1679577971301" duration="42352000" />
+      <workItem from="1679577971301" duration="64171000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1679496366055</created>
@@ -148,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679740572441</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="5">
+      <created>1679932113488</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679932113488</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +190,8 @@
     <MESSAGE value="2" />
     <MESSAGE value="3" />
     <MESSAGE value="4" />
-    <option name="LAST_COMMIT_MESSAGE" value="4" />
+    <MESSAGE value="5" />
+    <option name="LAST_COMMIT_MESSAGE" value="5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

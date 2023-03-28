@@ -7,6 +7,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 
 import java.io.IOException;
@@ -18,15 +19,28 @@ import java.nio.file.Paths;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
-public  class HelloController implements Initializable{
+public  class HelloController implements Initializable {
 
 
     public TableView  <FileInfo> listServer;
+    public VBox userPanel;
+
 
     public void quitApp(ActionEvent actionEvent) {
+        Platform.exit();
 
     }
-    public void  sendToUser(){
+    public void  sendToServer(ActionEvent actionEvent){
+        PaneController userPC = (PaneController) userPanel.getProperties().get("cntrl");
+        if(userPC.getSelectedFileName()==null){
+            Alert alert = new Alert(Alert.AlertType.ERROR,"Ни один вайл не был выбран",ButtonType.OK);
+            alert.showAndWait();
+            return;
+        }
+
+
+
+
 
 
     }
@@ -39,14 +53,63 @@ public  class HelloController implements Initializable{
             throw new RuntimeException(e);
         }
 
+        TableColumn<FileInfo,String> fileTypeColumn = new TableColumn<>();
+        fileTypeColumn.setCellValueFactory(param->new SimpleStringProperty(param.getValue().getFileType().getName()));
+        fileTypeColumn.setPrefWidth(25);
+
+
+        TableColumn<FileInfo,String>fileNameColumn = new TableColumn<>("Имя");
+        fileNameColumn.setCellValueFactory(param->new SimpleStringProperty(param.getValue().getFilename()));
+        fileNameColumn.setPrefWidth(200);
+
+        TableColumn<FileInfo,Long>fileSizeColumn = new TableColumn<>("Размер");
+        fileSizeColumn.setCellValueFactory(param->new SimpleObjectProperty<>(param.getValue().getFileSize()));
+        fileSizeColumn.setPrefWidth(90);
+        fileSizeColumn.setCellFactory(column ->{
+            return new TableCell<FileInfo,Long>(){
+                @Override
+                protected void updateItem(Long item,boolean empty){
+                    super.updateItem(item,empty);
+                    if(item == null || empty){
+                        setText("");
+                        setStyle("");
+
+                    }else {
+                        String text = String.format("%,d bytes",item);
+
+                        if(item == -1L){
+                            text = "[Dir]";
+                        }
+                        setText(text);
+                    }
+                }
+
+            };
+        });
+        listServer.getColumns().addAll(fileTypeColumn,fileNameColumn,fileSizeColumn);
+        listServer.getSortOrder().add(fileTypeColumn);
+
+        updateList(Path.of("SFiles"));
+
+    }
+    public void updateList(Path path){
+        listServer.getItems().clear();
+        try {
+            listServer.getItems().addAll(Files.list(path).map(FileInfo::new).collect(Collectors.toList()));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        listServer.sort();
+
     }
 
-    // @Override
-   // public void initialize(URL url, ResourceBundle resourceBundle) {
-   //     try {
-   //         Socket  socket = new  Socket("localhost",8899);
-   //     } catch (IOException e) {
-   //         throw new RuntimeException(e);
-   //     }
-   // }
+
+    public void copyToUser(ActionEvent actionEvent) {
+
+    }
+
+    public void delete(ActionEvent actionEvent) {
+
+    }
+
 }

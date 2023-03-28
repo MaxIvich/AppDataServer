@@ -12,4 +12,12 @@
         <Button text="Вверх" onAction="#btnPathAppAction" />
     </HBox>
     <TableView fx:id="listUser"  VBox.vgrow="ALWAYS" />
+    <properties>
+        <cntrl>
+           <fx:reference source="controller"/>
+        </cntrl>
+
+    </properties>
+
+
 </VBox>

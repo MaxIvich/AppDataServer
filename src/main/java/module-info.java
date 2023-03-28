@@ -3,6 +3,7 @@ module com.example.appdataserver {
     requires javafx.fxml;
     requires io.netty.transport;
     requires io.netty.buffer;
+    requires io.netty.codec;
 
 
     opens com.example.appdataserver to javafx.fxml;
