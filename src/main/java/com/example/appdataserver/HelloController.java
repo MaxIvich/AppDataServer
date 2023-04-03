@@ -1,29 +1,37 @@
 package com.example.appdataserver;
 
+import com.example.appdataserver.Client.BasicResponse;
+import com.example.appdataserver.Client.Client;
 import javafx.application.Platform;
-import javafx.beans.property.SimpleListProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.util.Callback;
 
 import java.io.IOException;
 import java.net.Socket;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
 public  class HelloController implements Initializable {
 
 
+
     public TableView  <FileInfo> listServer;
     public VBox userPanel;
+    public HBox panelBox;
+    public HBox buttonBox;
+    public TextField loginField;
+    public HBox authBox;
+    public PasswordField passField;
+    private Client client;
+
 
 
     public void quitApp(ActionEvent actionEvent) {
@@ -37,21 +45,16 @@ public  class HelloController implements Initializable {
             alert.showAndWait();
             return;
         }
-
-
-
-
-
-
     }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        try {
-            Socket socket = new Socket("localhost",8899);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    //  try {
+    //      Socket socket = new Socket("localhost",8899);
+    //  } catch (IOException e) {
+    //      throw new RuntimeException(e);
+    //  }
+        client = new Client();
+
 
         TableColumn<FileInfo,String> fileTypeColumn = new TableColumn<>();
         fileTypeColumn.setCellValueFactory(param->new SimpleStringProperty(param.getValue().getFileType().getName()));
@@ -73,7 +76,6 @@ public  class HelloController implements Initializable {
                     if(item == null || empty){
                         setText("");
                         setStyle("");
-
                     }else {
                         String text = String.format("%,d bytes",item);
 
@@ -112,4 +114,14 @@ public  class HelloController implements Initializable {
 
     }
 
+    public void signInBtnClick(ActionEvent actionEvent) {
+        String login  = loginField.getText();
+        String pass = passField.getText();
+        client.sendMsg( new BasicResponse(login + " " + pass));
+
+    }
+
+    public void RegBtnClick(ActionEvent actionEvent) {
+
+    }
 }

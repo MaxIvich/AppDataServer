@@ -11,11 +11,17 @@
             <MenuItem text="Выйти из программы" onAction="#quitApp"/>
             </Menu>
     </MenuBar>
-    <HBox VBox.vgrow="ALWAYS">
+    <HBox fx:id="authBox">
+        <TextField fx:id="loginField" promptText="login"/>
+        <PasswordField fx:id="passField" promptText="password"/>
+        <Button text="Sign in" onAction="#signInBtnClick"/>
+        <Button text="Reg" onAction="#RegBtnClick"/>
+    </HBox>
+    <HBox fx:id="panelBox" visible="false" VBox.vgrow="ALWAYS">
         <fx:include fx:id="userPanel" source="Pane.fxml" HBox.hgrow="ALWAYS"/>
         <TableView fx:id="listServer"  VBox.vgrow="ALWAYS"  />
     </HBox>
-    <HBox  spacing="5">
+    <HBox fx:id="buttonBox" visible="false" spacing="5">
         <Button onAction= "#sendToServer" maxWidth="Infinity" text="На сервер" HBox.hgrow="ALWAYS" focusTraversable="false" />
         <Button onAction="#copyToUser" maxWidth="Infinity"  text="C Сервера" HBox.hgrow="ALWAYS" focusTraversable="false" />
         <Button onAction="#delete" maxWidth="Infinity" text="Удалить" HBox.hgrow="ALWAYS" focusTraversable="false"/>

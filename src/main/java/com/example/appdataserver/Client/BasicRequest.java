@@ -6,4 +6,5 @@ public interface BasicRequest extends Serializable {
 
     String getType();
 
+
 }

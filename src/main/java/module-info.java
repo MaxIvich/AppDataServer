@@ -4,6 +4,7 @@ module com.example.appdataserver {
     requires io.netty.transport;
     requires io.netty.buffer;
     requires io.netty.codec;
+    requires java.sql;
 
 
     opens com.example.appdataserver to javafx.fxml;
