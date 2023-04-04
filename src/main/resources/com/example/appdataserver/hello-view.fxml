@@ -4,24 +4,19 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox  xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appdataserver.HelloController">
+<VBox fx:id="fullPanel"  xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appdataserver.HelloController">
 
     <MenuBar>
         <Menu text=" Файл">
             <MenuItem text="Выйти из программы" onAction="#quitApp"/>
             </Menu>
     </MenuBar>
-    <HBox fx:id="authBox">
-        <TextField fx:id="loginField" promptText="login"/>
-        <PasswordField fx:id="passField" promptText="password"/>
-        <Button text="Sign in" onAction="#signInBtnClick"/>
-        <Button text="Reg" onAction="#RegBtnClick"/>
-    </HBox>
-    <HBox fx:id="panelBox" visible="false" VBox.vgrow="ALWAYS">
+
+    <HBox fx:id="panelBox" VBox.vgrow="ALWAYS" visible="false">
         <fx:include fx:id="userPanel" source="Pane.fxml" HBox.hgrow="ALWAYS"/>
         <TableView fx:id="listServer"  VBox.vgrow="ALWAYS"  />
     </HBox>
-    <HBox fx:id="buttonBox" visible="false" spacing="5">
+    <HBox fx:id="buttonBox"  spacing="5" visible="false">
         <Button onAction= "#sendToServer" maxWidth="Infinity" text="На сервер" HBox.hgrow="ALWAYS" focusTraversable="false" />
         <Button onAction="#copyToUser" maxWidth="Infinity"  text="C Сервера" HBox.hgrow="ALWAYS" focusTraversable="false" />
         <Button onAction="#delete" maxWidth="Infinity" text="Удалить" HBox.hgrow="ALWAYS" focusTraversable="false"/>

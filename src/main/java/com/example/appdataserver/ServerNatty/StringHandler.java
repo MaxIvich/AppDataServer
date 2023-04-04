@@ -15,6 +15,7 @@ import java.util.function.Consumer;
 public class StringHandler extends ChannelInboundHandlerAdapter{
 
 
+
    // private static final Map<Class<? extends BasicRequest>, Consumer<ChannelHandlerContext>> REQUEST_HANDLERS = new HashMap<>();
 //
    // static {
@@ -41,6 +42,8 @@ public class StringHandler extends ChannelInboundHandlerAdapter{
             String[] UserData = response.getResponse().split(" ",2);
           if (BdUsers.isReg(UserData[0],UserData[1])){
               System.out.println(UserData[0]+ "  "+ UserData[1]);
+              ctx.writeAndFlush(new BooleanResponse(true));
+
 
           }
 

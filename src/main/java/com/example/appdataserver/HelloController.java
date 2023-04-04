@@ -20,8 +20,7 @@ import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
 public  class HelloController implements Initializable {
-
-
+    public static boolean isAuth ;
 
     public TableView  <FileInfo> listServer;
     public VBox userPanel;
@@ -30,7 +29,9 @@ public  class HelloController implements Initializable {
     public TextField loginField;
     public HBox authBox;
     public PasswordField passField;
+    public VBox fullPanel;
     private Client client;
+
 
 
 
@@ -48,12 +49,9 @@ public  class HelloController implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-    //  try {
-    //      Socket socket = new Socket("localhost",8899);
-    //  } catch (IOException e) {
-    //      throw new RuntimeException(e);
-    //  }
         client = new Client();
+
+
 
 
         TableColumn<FileInfo,String> fileTypeColumn = new TableColumn<>();
@@ -93,6 +91,7 @@ public  class HelloController implements Initializable {
 
         updateList(Path.of("SFiles"));
 
+
     }
     public void updateList(Path path){
         listServer.getItems().clear();
@@ -119,9 +118,22 @@ public  class HelloController implements Initializable {
         String pass = passField.getText();
         client.sendMsg( new BasicResponse(login + " " + pass));
 
+
     }
 
     public void RegBtnClick(ActionEvent actionEvent) {
 
+    }
+
+
+    public  void sendMsg(BasicResponse response) {
+        client.sendMsg(response);
+    }
+    public boolean isIsAuth(){
+        return isAuth;
+    }
+
+    public void close() {
+        client.closeConnection();
     }
 }

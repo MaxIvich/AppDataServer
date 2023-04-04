@@ -13,15 +13,16 @@ import io.netty.handler.codec.serialization.ObjectEncoder;
 public class Server {
 
     private static final int MB_20 = 20 * 1_000_000;
-    public static  void main(String[] args) throws InterruptedException {
-        EventLoopGroup bossGroup = new NioEventLoopGroup( 1);
+
+    public static void main(String[] args) throws InterruptedException {
+        EventLoopGroup bossGroup = new NioEventLoopGroup(1);
         EventLoopGroup workerGroup = new NioEventLoopGroup();
 
         try {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
-            serverBootstrap.group(bossGroup,workerGroup)
+            serverBootstrap.group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
-                    .childHandler(new ChannelInitializer<SocketChannel>(){
+                    .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             socketChannel.pipeline().addLast(
@@ -30,18 +31,23 @@ public class Server {
                                     new StringHandler()
 
                             );
-                      }
+                        }
 
                     });
             ChannelFuture channelFuture = serverBootstrap.bind(8899).sync();
             channelFuture.channel().closeFuture().sync();// Блокирующая операция
-        }finally {
+        } finally {
             workerGroup.shutdownGracefully();
             bossGroup.shutdownGracefully();
 
         }
 
     }
+
+
+
+
+
 
 
 }

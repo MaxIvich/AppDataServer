@@ -43,13 +43,6 @@
             <artifactId>netty-all</artifactId>
             <version>4.1.90.Final</version>
         </dependency>
-        <dependency>
-            <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.26</version>
-            <scope>provided</scope>
-        </dependency>
 
         <dependency>
             <groupId>org.xerial</groupId>

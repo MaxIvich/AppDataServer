@@ -22,9 +22,12 @@ public class BdUsers  {
             PreparedStatement statement = connection.prepareStatement("select  nick from auth where login = ? and pass = ? ");
             statement.setString(1,login);
             statement.setString(2,pass);
-
             ResultSet resultSet = statement.executeQuery();
-            if(resultSet!=null){
+            String nick = resultSet.getString(1);
+
+
+            if(nick!=null){
+                System.out.println("Пользователь  "+nick + " подключился");
                 return true;
             }else return false;
 
