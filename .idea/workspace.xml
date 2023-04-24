@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24626db0-e4b2-43ed-81f4-e6b3c1fa64e3" name="Changes" comment="6">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/AuthorisationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/BooleanResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/appdataserver/authorisation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/RegResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/AuthorisationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/AuthorisationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Bd/BdUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Bd/BdUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/BasicResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/BasicResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/ServerNatty/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/ServerNatty/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/ServerNatty/StringHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/ServerNatty/StringHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/appdataserver/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/appdataserver/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/users.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/users.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="0.2" />
+        <entry key="$PROJECT_DIR$" value="0.3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,27 +56,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_directory_selection": "C:/Users/jylve/Desktop/AppDataServer/src/main/java/com/example/appdataserver",
-    "last_opened_file_path": "C:/Users/jylve/Desktop/Cloud-master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/jylve/Desktop/AppDataServer/src/main/java/com/example/appdataserver&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jylve/Desktop/Cloud-master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.appdataserver.ServerNatty" />
@@ -136,7 +133,8 @@
       <workItem from="1679496288859" duration="14059000" />
       <workItem from="1679577971301" duration="65510000" />
       <workItem from="1680082485049" duration="9235000" />
-      <workItem from="1680202548727" duration="53499000" />
+      <workItem from="1680202548727" duration="59645000" />
+      <workItem from="1682338325302" duration="9188000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1679496366055</created>
@@ -187,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680554626137</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="6">
+      <created>1680615203033</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680615203033</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

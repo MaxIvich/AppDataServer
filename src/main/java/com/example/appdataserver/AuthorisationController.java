@@ -18,7 +18,6 @@ public class AuthorisationController{
 
 
     public void signInBtnClick(ActionEvent actionEvent) {
-
         String login  = loginField.getText();
         String pass = passField.getText();
         controller.sendMsg( new BasicResponse(login + " " + pass));

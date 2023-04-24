@@ -2,6 +2,7 @@ package com.example.appdataserver;
 
 import com.example.appdataserver.Client.BasicResponse;
 import com.example.appdataserver.Client.Client;
+import com.example.appdataserver.Client.RegResponse;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -92,6 +93,9 @@ public  class HelloController implements Initializable {
         updateList(Path.of("SFiles"));
 
 
+
+
+
     }
     public void updateList(Path path){
         listServer.getItems().clear();
@@ -117,21 +121,35 @@ public  class HelloController implements Initializable {
         String login  = loginField.getText();
         String pass = passField.getText();
         client.sendMsg( new BasicResponse(login + " " + pass));
-
-
+        try {
+            Thread.sleep(150);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        auth();
     }
-
     public void RegBtnClick(ActionEvent actionEvent) {
+        String login  = loginField.getText();
+        String pass = passField.getText();
+        client.sendMsg( new RegResponse(login + " " + pass));
+
 
     }
-
-
     public  void sendMsg(BasicResponse response) {
         client.sendMsg(response);
     }
-    public boolean isIsAuth(){
+    public boolean IsAuth(){
         return isAuth;
     }
+
+    public void auth(){
+        if(isAuth){authBox.setVisible(false);
+            panelBox.setVisible(isAuth);
+            buttonBox.setVisible(isAuth);}
+
+
+    }
+
 
     public void close() {
         client.closeConnection();

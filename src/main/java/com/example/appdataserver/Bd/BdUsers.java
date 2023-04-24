@@ -2,19 +2,39 @@ package com.example.appdataserver.Bd;
 
 import com.example.appdataserver.Client.AuthRequest;
 import com.example.appdataserver.Client.BasicRequest;
+import javafx.scene.chart.LineChart;
 
 import java.sql.*;
 
 public class BdUsers  {
 
     private static Connection connection;
+
+
+
+
     static String Url =  "jdbc:sqlite:C:/Users/jylve/Desktop/AppDataServer/src/main/resources/users.db";
     public BdUsers(){
         try {
             connection = DriverManager.getConnection(Url);
+
         }catch (SQLException e){
             throw new RuntimeException("не удалось подключится к БД" +e.getMessage(),e);
         }
+    }
+
+
+    public static void reg(String login, String pass){
+        try {
+            Connection connection = DriverManager.getConnection(Url);
+            Statement statement = connection.createStatement();
+
+            statement.executeUpdate("INSERT INTO  auth(login , pass , nick) VALUES ('"+login+"','"+pass+"','"+login+"')");
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+
+
     }
     public static boolean isReg(String login,String pass){
         try {
@@ -24,14 +44,10 @@ public class BdUsers  {
             statement.setString(2,pass);
             ResultSet resultSet = statement.executeQuery();
             String nick = resultSet.getString(1);
-
-
             if(nick!=null){
                 System.out.println("Пользователь  "+nick + " подключился");
                 return true;
             }else return false;
-
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

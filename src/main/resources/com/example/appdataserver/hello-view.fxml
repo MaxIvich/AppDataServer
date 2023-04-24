@@ -11,6 +11,12 @@
             <MenuItem text="Выйти из программы" onAction="#quitApp"/>
             </Menu>
     </MenuBar>
+    <HBox fx:id="authBox" >
+        <TextField fx:id="loginField" promptText="login"/>
+        <PasswordField fx:id="passField" promptText="password"/>
+        <Button text="Sign in" onAction="#signInBtnClick"/>
+        <Button text="Reg" onAction="#RegBtnClick"/>
+    </HBox>
 
     <HBox fx:id="panelBox" VBox.vgrow="ALWAYS" visible="false">
         <fx:include fx:id="userPanel" source="Pane.fxml" HBox.hgrow="ALWAYS"/>
