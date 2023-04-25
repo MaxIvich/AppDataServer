@@ -1,7 +1,6 @@
 package com.example.appdataserver;
 
 import com.example.appdataserver.Client.BasicResponse;
-import com.example.appdataserver.Client.Client;
 import javafx.event.ActionEvent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;

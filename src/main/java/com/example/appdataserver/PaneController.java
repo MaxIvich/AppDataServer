@@ -1,5 +1,6 @@
 package com.example.appdataserver;
 
+import com.example.appdataserver.Client.FileInfo;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -10,7 +11,6 @@ import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
-import java.net.Socket;
 import java.net.URL;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;

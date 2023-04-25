@@ -7,6 +7,10 @@ module com.example.appdataserver {
     requires java.sql;
 
 
-    opens com.example.appdataserver to javafx.fxml;
-    exports com.example.appdataserver;
+   opens com.example.appdataserver to javafx.fxml;
+   exports com.example.appdataserver;
+
+    exports com.example.appdataserver.Client;
+    opens com.example.appdataserver.Client to javafx.fxml;
+
 }

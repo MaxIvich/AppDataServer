@@ -2,6 +2,7 @@ package com.example.appdataserver;
 
 import com.example.appdataserver.Client.BasicResponse;
 import com.example.appdataserver.Client.Client;
+import com.example.appdataserver.Client.FileInfo;
 import com.example.appdataserver.Client.RegResponse;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleObjectProperty;
@@ -13,7 +14,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
-import java.net.Socket;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -46,6 +46,13 @@ public  class HelloController implements Initializable {
             Alert alert = new Alert(Alert.AlertType.ERROR,"Ни один вайл не был выбран",ButtonType.OK);
             alert.showAndWait();
             return;
+        }else {
+            String FileName  = userPC.getSelectedFileName();
+            System.out.println(FileName);
+            String path = userPC.getCurrentPatch();
+            System.out.println(path);
+
+
         }
     }
     @Override
@@ -139,7 +146,7 @@ public  class HelloController implements Initializable {
         return isAuth;
     }
 
-    public void auth(){
+    public  void auth(){
         if(isAuth){authBox.setVisible(false);
             panelBox.setVisible(isAuth);
             buttonBox.setVisible(isAuth);}

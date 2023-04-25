@@ -1,4 +1,4 @@
-package com.example.appdataserver;
+package com.example.appdataserver.Client;
 
 import java.io.IOException;
 import java.nio.file.Files;

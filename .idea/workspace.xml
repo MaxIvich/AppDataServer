@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24626db0-e4b2-43ed-81f4-e6b3c1fa64e3" name="Changes" comment="7">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/FileMsg.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Bd/BdUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Bd/BdUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/AuthRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/BasicRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/AuthorisationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/AuthorisationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/GetFileListRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/MsgRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/FileInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/Client/FileInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/PaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appdataserver/PaneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +85,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jylve\Desktop\AppDataServer\src\main\resources" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.appdataserver" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.HelloApplication">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -131,7 +135,7 @@
       <workItem from="1679577971301" duration="65510000" />
       <workItem from="1680082485049" duration="9235000" />
       <workItem from="1680202548727" duration="59645000" />
-      <workItem from="1682338325302" duration="14684000" />
+      <workItem from="1682338325302" duration="19401000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1679496366055</created>
@@ -196,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682350587611</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="7">
+      <created>1682434218181</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682434218181</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
