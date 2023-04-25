@@ -1,7 +1,6 @@
 package com.example.appdataserver.Bd;
 
-import com.example.appdataserver.Client.AuthRequest;
-import com.example.appdataserver.Client.BasicRequest;
+
 import javafx.scene.chart.LineChart;
 
 import java.sql.*;

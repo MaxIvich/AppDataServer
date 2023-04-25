@@ -52,9 +52,6 @@ public  class HelloController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         client = new Client();
 
-
-
-
         TableColumn<FileInfo,String> fileTypeColumn = new TableColumn<>();
         fileTypeColumn.setCellValueFactory(param->new SimpleStringProperty(param.getValue().getFileType().getName()));
         fileTypeColumn.setPrefWidth(25);
@@ -122,7 +119,7 @@ public  class HelloController implements Initializable {
         String pass = passField.getText();
         client.sendMsg( new BasicResponse(login + " " + pass));
         try {
-            Thread.sleep(150);
+            Thread.sleep(250);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

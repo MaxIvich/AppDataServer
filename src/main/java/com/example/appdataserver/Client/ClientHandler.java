@@ -16,10 +16,9 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 
         if(msg instanceof BooleanResponse response){
-            System.out.println(msg);
-            System.out.println(response.isResponse());
             if(response.isResponse()){
                 HelloController.isAuth = true;
+
             };
         }
     }
